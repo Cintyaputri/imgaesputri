@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="baru.css">
+</head>
+<body>
+    <h4>Menghitung Luas dan Keliling Segitiga</h4>
+    <form>
+        <label>Alas: <input type="text" id="alas"></label><br>
+        <label>Tinggi: <input type="text" id="tinggi"></label><br>
+        <label>Luas: <input type="text" id="luas" disabled></label><br>
+        <label>Keliling: <input type="text" id="keliling" disabled></label><br>
+        <input type="button" value="Hitung" onClick="hitung()">
+    </form>
+    <script>
+        function hitung() {
+            let alas = parseFloat(document.getElementById("alas").value);
+            let tinggi = parseFloat(document.getElementById("tinggi").value);
+            let sisiMiring = Math.sqrt((alas * alas) + (tinggi * tinggi));
+            let keliling = alas + tinggi + sisiMiring;
+            let luas = 0.5 * alas * tinggi;
+
+            document.getElementById("luas").value = luas.toFixed(2);
+            document.getElementById("keliling").value = keliling.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
